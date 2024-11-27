@@ -195,3 +195,17 @@ function dibujarcuadriculado(){
         i = i + 20;
     }
 }
+
+function dibujarimagen(x,y){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var img =  new Image();
+    img.src = "images/auto.png";
+
+    canvas.width = canvas.width;
+
+    img.onload  = function (){
+        ctx.drawImage(img,x,y);
+    }
+}
