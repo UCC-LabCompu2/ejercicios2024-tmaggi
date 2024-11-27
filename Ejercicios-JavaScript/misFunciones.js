@@ -121,3 +121,19 @@ function cargarresultado(){
 
     document.getElementById("dist").value = can + ""+ un;
 }
+
+function glocalstorage(){
+    var cant, unidad;
+
+    cant = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
+    localStorage.setItem("distanciaLS",cant);
+    localStorage.setItem("unidadesLS",unidad);
+    window.open('2_web.html');
+}
+function pulllocalstorage(){
+    let can, un;
+    can = localStorage.getItem("distanciaLS");
+    un = localStorage.getItem("unidadesLS");
+    document.getElementById("dist").value = can + " " + un;
+}
