@@ -1,9 +1,9 @@
 /**
- * Descripción
- * @method Nombre de la función
- * @param Parámetro A
- * @param Parámetro B
- * @return Valor que retorna
+ * conversion de unidades
+ * @method cambiarunidades
+ * @param {string} id
+ * @param {number} valor
+ * @return
  */
 
 function cambiarunidades(id, valor){
