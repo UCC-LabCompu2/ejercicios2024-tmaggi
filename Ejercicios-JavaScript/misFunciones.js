@@ -137,3 +137,17 @@ function pulllocalstorage(){
     un = localStorage.getItem("unidadesLS");
     document.getElementById("dist").value = can + " " + un;
 }
+
+function dibujarcirc(){
+    var canvas=document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var yMax = canvas.height
+    var xmax = canvas.width;
+    var margen = 5;
+    ctx.fillStyle = "#333899";
+    ctx.fillRect(margen,yMax-40 - margen,40,40);
+    ctx.arc(xmax/2, yMax/2,20,0,2*Math.PI);
+    ctx.fillStyle = "#e200fd";
+    ctx.stroke();
+    ctx.fill();
+}
