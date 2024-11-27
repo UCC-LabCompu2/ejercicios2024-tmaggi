@@ -151,3 +151,24 @@ function dibujarcirc(){
     ctx.stroke();
     ctx.fill();
 }
+
+var bandera;
+function dibujar(event){
+    var canvas = document.getElementById("dibujar");
+    var ctx = canvas.getContext("2d");
+
+    var posx = event.clientX;
+    var posy = event.clientY;
+
+    canvas.onmousedown = function () {bandera = true};
+    canvas.onmouseup = function (){bandera = false};
+    if(bandera){
+        ctx.fillRect(posx,posy,5,5);
+        ctx.fill;
+    }
+}
+function limpiarcanvas(){
+    var canvas = document.getElementById("dibujar");
+    var ctx = canvas.getContext("2d");
+    canvas.width = canvas.width;
+}
