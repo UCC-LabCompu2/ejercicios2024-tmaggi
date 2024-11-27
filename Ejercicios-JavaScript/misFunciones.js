@@ -172,3 +172,26 @@ function limpiarcanvas(){
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 }
+
+function dibujarcuadriculado(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var amax = canvas.height;
+    var wmax = canvas.width;
+    ctx.beginPath();
+    for (var i =0; i < amax;){
+        ctx.moveTo(0,i);
+        ctx.lineTo(wmax,i);
+        ctx.strokeStyle = "#3e67d9";
+        ctx.stroke();
+        i = i + 20;
+    }
+    ctx.closePath();
+    for (var i =0; i < wmax;){
+        ctx.moveTo(i,0);
+        ctx.lineTo(i,amax);
+        ctx.strokeStyle = "#3e67d9";
+        ctx.stroke();
+        i = i + 20;
+    }
+}
